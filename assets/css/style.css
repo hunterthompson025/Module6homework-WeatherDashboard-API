@@ -1,0 +1,47 @@
+.navbar-brand {
+    font-size: 50px;
+    color: white;
+}
+
+.nav-container {
+    background-image: linear-gradient(to right, #0055ff, #07036b);
+    margin: 0;
+}
+
+.top-card {
+    height: 30vh;
+}
+
+.top-card-box {
+    width: 70vw;
+    border: 1px solid black;
+}
+
+.forecast-header {
+    font-size: 30px;
+}
+
+.card {
+    margin: 4rem, 0;
+}
+
+.border-start {
+    background-color: rgb(37, 37, 191);
+    color: white;
+}
+
+.form-label {
+    font-size: 30px;
+}
+
+.btn-secondary {
+    color: black;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.top-card-body {
+    padding: 2px;
+}
