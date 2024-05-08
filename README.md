@@ -20,7 +20,9 @@ N/A
 Please refer to the LICENSE in the repo.
 
 ## Deployed Application
-
+https://hunterthompson025.github.io/Module6homework-WeatherDashboard-API/
 
 
 ## Screenshot of Application
+![Weather Dashboard](https://github.com/hunterthompson025/Module6homework-WeatherDashboard-API/assets/163206449/b7759d03-e394-4ebd-9e33-a764be66e7e8)
+
