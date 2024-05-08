@@ -3,7 +3,7 @@ const cityInputEl = document.querySelector('#city-input');
 const cityNameEl = document.querySelector('#city-name');
 const topCardContainerEl = document.querySelector('#top-card-container');
 const cardContainerEl = document.querySelector('#card-group');
-const apiKey = 'd931af5bcfa36b258754c8f89f606974';
+const apiKey = 'please update this with your own apikey for this site';
 
 //Function to submit cityName to trigger the API call
 function handleCityFormSubmit(event) {
@@ -12,7 +12,7 @@ function handleCityFormSubmit(event) {
     const cityName = cityInputEl.value.trim();
 
     if (cityName) {
-        //placeholder function that will call the API to return data
+        //API call to get weather data.
         getWeatherData(cityName);
         //Get cities from local storage
         let cities = JSON.parse(localStorage.getItem('cities')) || [];
@@ -29,6 +29,39 @@ function handleCityFormSubmit(event) {
         alert('You need a city input value!');
     }
 };
+
+//Function to create a button with the cityname
+function createCityButton(cityName) {
+    const cityButton = document.createElement('button');
+    cityButton.textContent = cityName;
+    cityButton.className = 'btn btn-secondary';
+    cityButton.type = 'button';
+    cityButton.dataset.cityName = cityName;
+    //add eventlistener for when the button is clicked
+    cityButton.addEventListener('click', function () {
+        const storedCityName = this.dataset.cityName;
+        if (storedCityName) {
+            topCardContainerEl.innerHTML = "";
+            cardContainerEl.innerHTML = "";
+            getWeatherData(storedCityName);
+        } else {
+            alert('City name not found in local storage');
+        }
+    });
+    //check to see if button already exists, if it does do not create another button
+    const existingButtons = document.querySelectorAll('.btn-secondary');
+    let cityNameExists = false;
+    existingButtons.forEach(function(button) {
+        if (button.dataset.cityName === cityName) {
+            cityNameExists = true;
+        }
+    });
+
+    // If cityName does not already exist, then create the button
+    if (!cityNameExists) {
+        document.querySelector('#button-group').appendChild(cityButton);
+    }
+}
 
 function getWeatherData(cityName) {
     //Make first API call to get latitude and longitude
