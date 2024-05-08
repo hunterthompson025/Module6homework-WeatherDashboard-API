@@ -168,3 +168,5 @@ function getFiveDayForecast(cityName, apiKey) {
         });
 }
 
+//Add Event Listener for search button submit
+cityFormEl.addEventListener('submit', handleCityFormSubmit);
