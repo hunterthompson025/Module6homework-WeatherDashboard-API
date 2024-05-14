@@ -3,7 +3,7 @@ const cityInputEl = document.querySelector('#city-input');
 const cityNameEl = document.querySelector('#city-name');
 const topCardContainerEl = document.querySelector('#top-card-container');
 const cardContainerEl = document.querySelector('#card-group');
-const apiKey = 'please update this with your own apikey for this site';
+const apiKey = '3f2d55ec2713b9c8782084297f60c357';
 
 //Function to submit cityName to trigger the API call
 function handleCityFormSubmit(event) {
